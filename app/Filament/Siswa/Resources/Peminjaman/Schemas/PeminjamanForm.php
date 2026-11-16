@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Siswa\Resources\Peminjamen\Schemas;
+namespace App\Filament\Siswa\Resources\Peminjaman\Schemas;
 
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Select;

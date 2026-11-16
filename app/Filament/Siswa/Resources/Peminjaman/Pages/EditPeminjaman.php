@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Siswa\Resources\Peminjamen\Pages;
+namespace App\Filament\Siswa\Resources\Peminjaman\Pages;
 
-use App\Filament\Siswa\Resources\Peminjamen\PeminjamanResource;
+use App\Filament\Siswa\Resources\Peminjaman\PeminjamanResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 

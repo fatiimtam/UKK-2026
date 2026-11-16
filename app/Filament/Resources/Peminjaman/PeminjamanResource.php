@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Filament\Siswa\Resources\Peminjamen;
+namespace App\Filament\Resources\Peminjaman;
 
-use Illuminate\Database\Eloquent\Builder;
-use App\Filament\Siswa\Resources\Peminjamen\Pages\CreatePeminjaman;
-use App\Filament\Siswa\Resources\Peminjamen\Pages\EditPeminjaman;
-use App\Filament\Siswa\Resources\Peminjamen\Pages\ListPeminjamen;
-use App\Filament\Siswa\Resources\Peminjamen\Schemas\PeminjamanForm;
-use App\Filament\Siswa\Resources\Peminjamen\Tables\PeminjamenTable;
+use App\Filament\Resources\Peminjaman\Pages\CreatePeminjaman;
+use App\Filament\Resources\Peminjaman\Pages\EditPeminjaman;
+use App\Filament\Resources\Peminjaman\Pages\ListPeminjaman;
+use App\Filament\Resources\Peminjaman\Schemas\PeminjamanForm;
+use App\Filament\Resources\Peminjaman\Tables\PeminjamanTable;
 use App\Models\Peminjaman;
 use BackedEnum;
 use Filament\Resources\Resource;
@@ -21,15 +20,20 @@ class PeminjamanResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $recordTitleAttribute = 'Peminjaman';
-
-    public static function getEloquentQuery(): Builder
+    public static function getNavigationLabel(): string
     {
-        return parent::getEloquentQuery()
-            ->where('user_id', auth()->id())
-            ->where('status', 'dipinjam');
+        return 'Peminjaman';
     }
-    
+
+    public static function getModelLabel(): string
+    {
+        return 'Peminjaman';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Peminjaman';
+    }
 
     public static function form(Schema $schema): Schema
     {
@@ -38,7 +42,7 @@ class PeminjamanResource extends Resource
 
     public static function table(Table $table): Table
     {
-        return PeminjamenTable::configure($table);
+        return PeminjamanTable::configure($table);
     }
 
     public static function getRelations(): array
@@ -51,7 +55,7 @@ class PeminjamanResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => ListPeminjamen::route('/'),
+            'index' => ListPeminjaman::route('/'),
             'create' => CreatePeminjaman::route('/create'),
             'edit' => EditPeminjaman::route('/{record}/edit'),
         ];

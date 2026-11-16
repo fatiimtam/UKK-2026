@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Siswa\Resources\Peminjamen\Tables;
+namespace App\Filament\Siswa\Resources\Peminjaman\Tables;
 
 use App\Models\Peminjaman;
 use Filament\Actions\Action;
@@ -11,7 +11,7 @@ use Filament\Notifications\Notification;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
-class PeminjamenTable
+class PeminjamanTable
 {
     public static function configure(Table $table): Table
     {

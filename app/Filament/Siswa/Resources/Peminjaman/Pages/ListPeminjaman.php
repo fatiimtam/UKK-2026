@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Filament\Siswa\Resources\Peminjamen\Pages;
+namespace App\Filament\Siswa\Resources\Peminjaman\Pages;
 
-use App\Filament\Siswa\Resources\Peminjamen\PeminjamanResource;
+use App\Filament\Siswa\Resources\Peminjaman\PeminjamanResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 
-class ListPeminjamen extends ListRecords
+class ListPeminjaman extends ListRecords
 {
     protected static string $resource = PeminjamanResource::class;
 
